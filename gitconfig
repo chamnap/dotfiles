@@ -1,5 +1,5 @@
 [push]
-  default = current
+	default = simple
 [color]
   ui = auto
 [alias]
@@ -17,7 +17,10 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-[merge]
-  ff = only
+#[merge]
+#  ff = only
 [include]
   path = .gitconfig.local
+[user]
+	name = Chamnap Chhorn
+	email = chamnapchhorn@gmail.com

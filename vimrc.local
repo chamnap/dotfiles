@@ -1,0 +1,43 @@
+" Color scheme
+syntax enable
+set t_Co=256
+
+" solarized options
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+set background=dark
+colorscheme solarized
+
+" set foldmethod=syntax
+" set foldlevelstart=20
+
+set encoding=utf-8
+set scrolloff=3    " Start scrolling three lines before the horizontal window border
+set cursorline     " Highlight current line
+set hlsearch       " Highlight searches [use :noh to clear]
+set mouse=a
+set pastetoggle=<F2>
+
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" On OSX
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+
+"1308301011: take from rails best practice.
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()

@@ -1,0 +1,14 @@
+[user]
+  name = Chamnap Chhorn
+  email = chamnapchhorn@gmail.com
+
+[github]
+  user = chamnap
+
+[alias]
+  l = log --pretty=colored
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit -n 15
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+[pretty]
+  colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset

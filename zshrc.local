@@ -1,0 +1,8 @@
+# Load RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+export EDITOR="vim"
+# show cursor related to command and insert mode                            
+vim_ins_mode="[INS]"
+vim_cmd_mode="[CMD]"
+vim_mode=$vim_ins_mode
